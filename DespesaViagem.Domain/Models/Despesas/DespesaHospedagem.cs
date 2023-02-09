@@ -1,17 +1,10 @@
-﻿namespace DespesaViagem.Domain
-{
-    public record Endereco
-    {
-        public required string Logradouro { get; set; }
-        public required int NumeroCasa { get; set; }
-        public required string CEP { get; set; }
-        public required string Cidade { get; set;}
-        public required string Estado { get; set; }
-    }
+﻿using DespesaViagem.Domain.Models.Core.Records;
 
+namespace DespesaViagem.Domain.Models.Despesas
+{    
     public class DespesaHospedagem : Despesa
     {
-        public Endereco Endereco { get; private set; }        
+        public Endereco Endereco { get; private set; }
         public int QuantidadeDias { get; private set; }
         public decimal ValorDiaria { get; private set; }
         public DespesaHospedagem(int id, string descricaoDespesa, Endereco endereco, int quantidadeDias, decimal valorDiaria)

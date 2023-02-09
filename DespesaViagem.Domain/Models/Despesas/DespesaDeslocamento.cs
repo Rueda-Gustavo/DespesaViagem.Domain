@@ -1,11 +1,7 @@
-﻿namespace DespesaViagem.Domain
-{
-    public record Veiculo
-    {
-        public required string Placa { get; set; }
-        public required string Modelo { get; set; }
-    }
+﻿using DespesaViagem.Domain.Models.Core.Records;
 
+namespace DespesaViagem.Domain.Models.Despesas
+{
     public class DespesaDeslocamento : Despesa
     {
 
@@ -21,7 +17,5 @@
             ValorPorQuilometro = valorPorQuilometro;
             Veiculo = veiculo;
         }
-
-
     }
 }
