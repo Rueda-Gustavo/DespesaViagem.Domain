@@ -1,11 +1,13 @@
 ﻿using DespesaViagem.Domain.Models.Core.Enums;
 using DespesaViagem.Domain.Models.Core.Records;
 using DespesaViagem.Domain.Models.Despesas;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace DespesaViagem.Domain.Models.Viagem
 {            
     public class Viagem
-    {
+    {        
         public int Id { get; }
         public string NomeViagem { get; set; }
         public string DescricaoViagem { get; set; }
